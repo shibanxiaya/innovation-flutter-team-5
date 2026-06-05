@@ -6,7 +6,6 @@ void main() {
 
 class InnovationHelloApp extends StatelessWidget {
   const InnovationHelloApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,14 +22,12 @@ class InnovationHelloApp extends StatelessWidget {
 
 class HelloHomePage extends StatefulWidget {
   const HelloHomePage({super.key});
-
   @override
   State<HelloHomePage> createState() => _HelloHomePageState();
 }
 
 class _HelloHomePageState extends State<HelloHomePage> {
   int completedTasks = 0;
-
   void finishOneTask() {
     setState(() {
       completedTasks += 1;
@@ -46,6 +43,7 @@ class _HelloHomePageState extends State<HelloHomePage> {
         centerTitle: true,
         elevation: 0,
       ),
+      // 渐变背景
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
