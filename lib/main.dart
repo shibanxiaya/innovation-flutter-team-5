@@ -9,7 +9,7 @@ class InnovationHelloApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '� Flutter 软萌小窝',
+      title: 'Flutter学习打卡',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFFFFB7C5),
@@ -57,20 +57,21 @@ class _HelloHomePageState extends State<HelloHomePage> {
         elevation: 0,
         shadowColor: Colors.transparent,
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFFFFF0F3),
-              Color(0xFFFFE6EC),
-              Color(0xFFF3E8FF),
-              Color(0xFFEDE4FF),
-            ],
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color(0xFFFFF0F3),
+                Color(0xFFFFE6EC),
+                Color(0xFFF3E8FF),
+                Color(0xFFEDE4FF),
+              ],
+            ),
           ),
-        ),
-        child: Stack(
+          child: Stack(
           children: [
             Positioned(top: 80, left: 20, child: CloudIcon()),
             Positioned(top: 150, right: 30, child: HeartIcon()),
@@ -99,7 +100,7 @@ class _HelloHomePageState extends State<HelloHomePage> {
                     ),
                     const SizedBox(height: 20),
                     const Text(
-                      '� Hello Flutter! �',
+                      'Hello Flutter!',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 34,
@@ -221,7 +222,7 @@ class _HelloHomePageState extends State<HelloHomePage> {
                         ],
                       ),
                       child: const Text(
-                        '� "每一天的努力，都是未来的礼物！"',
+                        '"每一天的努力，都是未来的礼物！"',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16,
@@ -247,6 +248,7 @@ class _HelloHomePageState extends State<HelloHomePage> {
               ),
             ),
           ],
+          ),
         ),
       ),
       floatingActionButton: GestureDetector(
@@ -274,7 +276,7 @@ class _HelloHomePageState extends State<HelloHomePage> {
               Icon(Icons.check_circle, color: Colors.white, size: 26),
               SizedBox(width: 12),
               Text(
-                '今日学习打卡 💕',
+                '今日学习打卡',
                 style: TextStyle(
                   fontSize: 19,
                   fontWeight: FontWeight.bold,
@@ -287,7 +289,7 @@ class _HelloHomePageState extends State<HelloHomePage> {
           ),
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
